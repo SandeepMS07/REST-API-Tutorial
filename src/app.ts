@@ -7,7 +7,7 @@ import routes from "./utils/routes";
 const port = config.get<number>("port");
 
 const app = express();
-
+app.use(express.json())
 app.listen(port, async () => {
   logger.info(`app is running  at http://localhost:${port}`);
   await connect();
