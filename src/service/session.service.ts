@@ -1,7 +1,7 @@
-import SessionModel from "../models/session.module";
+import SessionModel from '../models/session.module'
 
 export async function createSession(userId: string, userAgent: string) {
-  const session = await SessionModel.create({ user: userId, userAgent });
+  const session = await SessionModel.create({ user: userId, userAgent })
 
-  return session.toJSON();
+  return session.toJSON()
 }
